@@ -1,0 +1,3 @@
+package br.com.portfolio.saudebrasil.api;
+import org.springframework.web.bind.annotation.*;import org.springframework.http.HttpStatus;import jakarta.validation.Valid;import java.util.List;
+@RestController @RequestMapping("/api/appointments") public class AppointmentController { private final AppointmentRepository repo; public AppointmentController(AppointmentRepository repo){this.repo=repo;} @GetMapping public List<Appointment> all(){return repo.findAll();} @PostMapping @ResponseStatus(HttpStatus.CREATED) public Appointment create(@Valid @RequestBody Appointment value){return repo.save(value);} }

@@ -1,0 +1,3 @@
+package br.com.portfolio.saudebrasil.config;
+import org.springframework.context.annotation.Configuration;import org.springframework.web.servlet.config.annotation.*;
+@Configuration public class WebConfig implements WebMvcConfigurer { public void addCorsMappings(CorsRegistry r){r.addMapping("/api/**").allowedOrigins("http://127.0.0.1:5500","http://localhost:5500").allowedMethods("GET","POST","PATCH","OPTIONS");} }

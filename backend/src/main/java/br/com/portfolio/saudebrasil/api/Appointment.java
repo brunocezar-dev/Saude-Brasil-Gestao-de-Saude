@@ -1,0 +1,5 @@
+package br.com.portfolio.saudebrasil.api;
+import jakarta.persistence.*;import jakarta.validation.constraints.*;
+@Entity public class Appointment { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id; @NotBlank private String patientName; @NotBlank private String specialty; @NotBlank private String unitName; private String appointmentDate; private String status;
+public Long getId(){return id;} public String getPatientName(){return patientName;} public void setPatientName(String v){patientName=v;} public String getSpecialty(){return specialty;} public void setSpecialty(String v){specialty=v;} public String getUnitName(){return unitName;} public void setUnitName(String v){unitName=v;} public String getAppointmentDate(){return appointmentDate;} public void setAppointmentDate(String v){appointmentDate=v;} public String getStatus(){return status;} public void setStatus(String v){status=v;}
+}
